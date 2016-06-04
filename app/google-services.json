@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "148938023158",
+    "project_id": "filmophile-497b4"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148938023158:android:0c81b7fc9b2a9d1b",
+        "android_client_info": {
+          "package_name": "com.roshanrai.filmophile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbWEWX1sRVTS5mJMrh3j3GG9XyZI2oPPI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-78801792-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

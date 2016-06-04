@@ -1,0 +1,81 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.roshanrai.filmophile">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".FilmophileApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.roshanrai.filmophile.view.activity.HomeActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name="com.roshanrai.filmophile.view.activity.ListPopularMoviesActivity" />
+        <activity android:name="com.roshanrai.filmophile.view.activity.ListTopRatedMoviesActivity" />
+        <activity android:name="com.roshanrai.filmophile.view.activity.ListUpcomingMoviesActivity" />
+        <activity android:name="com.roshanrai.filmophile.view.activity.ListNowPlayingMoviesActivity" />
+        <activity android:name="com.roshanrai.filmophile.view.activity.MovieProfileActivity" />
+        <activity android:name="com.roshanrai.filmophile.view.activity.ListMoviesByGenreActivity" />
+        <activity android:name="com.roshanrai.filmophile.view.activity.PersonProfileActivity" />
+        <activity android:name="com.roshanrai.filmophile.view.activity.SearchMovieActivity" />
+        <activity android:name="com.roshanrai.filmophile.view.activity.SearchPersonActivity" />
+        <activity android:name="com.roshanrai.filmophile.view.activity.FullImageSliderActivity" />
+        <activity android:name="com.roshanrai.filmophile.view.activity.UserProfileActivity" />
+        <activity android:name="com.roshanrai.filmophile.view.activity.DiscoveryActivity" />
+        <activity
+            android:name="com.roshanrai.filmophile.view.activity.SearchActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <provider
+            android:name="com.roshanrai.filmophile.model.dao.impl.MovieCheckContentProvider"
+            android:authorities="com.roshanrai.filmophile.model.dao.contentprovider.moviecheckcontentprovider"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:label="MovieCheckContentProvider"
+            android:readPermission="com.roshanrai.filmophile.model.dao.contentprovider.moviecheckcontentprovider.READ"
+            android:writePermission="com.roshanrai.filmophile.model.dao.contentprovider.moviecheckcontentprovider.WRITE" />
+
+        <service
+            android:name="com.roshanrai.filmophile.widget.UpcomingMovieWidgetRemoteViewsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <service android:name="com.roshanrai.filmophile.widget.UpcomingMovieUpdateService" />
+
+        <receiver
+            android:name="com.roshanrai.filmophile.widget.UpcomingMoviesWidget"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/upcomingmovieswidget_title">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/upcomingmovieswidget_info" />
+        </receiver>
+
+    </application>
+
+</manifest>
