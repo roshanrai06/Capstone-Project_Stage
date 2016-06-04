@@ -7,8 +7,8 @@
     <string name="sharedpreferences_hasreadtutorial">sharedpreferences_hasreadtutorial_moviecheck</string>
     <string name="themoviedbapi_baseurl">http://api.themoviedb.org/3/</string>
     <string name="imagetmdb_baseurl">http://image.tmdb.org/t/p/w500</string>
-    <string name="themoviedbapi_key">c0bb908a2d5205db7c1b0202b8d24dda</string>
-    <string name="youtube_credential">AIzaSyCLcunU7LR5CrNKPVnPixFYrmId5lF2KlE</string>
+    <string name="themoviedbapi_key">put api key here</string>
+    <string name="youtube_credential">put you tube key here</string>
     <string name="youtube_image_url">https://img.youtube.com/vi/%1$s/0.jpg</string>
     <string name="general_nowplaying">Now Playing Movies</string>
     <string name="general_upcoming">Upcoming Movies</string>
