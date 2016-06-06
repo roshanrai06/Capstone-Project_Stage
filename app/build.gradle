@@ -15,7 +15,7 @@ android {
         config {
             keyAlias 'Filmophile Key'
             keyPassword '123456'
-            storeFile file('E:/MovieApp/Capstone-Project/filmophile.jks')
+            storeFile file('../filmophile.jks')
             storePassword '123456'
         }
     }
